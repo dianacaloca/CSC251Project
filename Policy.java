@@ -108,14 +108,20 @@ public class Policy
       double addFee = 0.0;
       
       if (age > 50){
-         addFee = 75.0;
-         
+         addFee = 75.0;     
       }
+         else if (age <= 50){
+            addFee = 0.0;
+         }
       if (smokeStatus.equalsIgnoreCase("smoker"))
       {
          addFee = 100.0;
          
       }
+         else if(smokeStatus.equalsIgnoreCase("non-smoker")){
+            addFee = 0.0;
+         }
+         
       if (getHolderBMI() > 35)
       {
          addFee = (getHolderBMI() - 35) * 20;
