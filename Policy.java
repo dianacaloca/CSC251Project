@@ -141,6 +141,6 @@ public class Policy
          addFee = ((getHolderBMI() - 35) * 20) + 100;
          
       }
-         return addFee;
+         return BASE_FEE + addFee;
    }
 }
