@@ -23,7 +23,7 @@ public class Project1_Diana_Caloca
       keyboard.nextLine();
      System.out.println("Please enter the Policyholder's Smoking Status (smoker/non-smoker): ");
       status = keyboard.nextLine();
-     System.out.println("Please enter the Policyholder's Height (in inches): ");
+     System.out200.println("Please enter the Policyholder's Height (in inches): ");
       holderHeight = keyboard.nextDouble();
      System.out.println("Please enter the Policyholder's Weight (in pounds): ");
       holderWeight = keyboard.nextDouble();
