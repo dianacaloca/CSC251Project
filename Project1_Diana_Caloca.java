@@ -7,7 +7,7 @@ public class Project1_Diana_Caloca
    public static void main(String[] args) throws IOException
    {
      Scanner keyboard = new Scanner(System.in);
-     int num, holderAge;
+     int num, holderAge, nonSmoker = 0, smoker = 0;
      double holderHeight, holderWeight;
      String provider, first, last, status;
      
@@ -40,6 +40,15 @@ public class Project1_Diana_Caloca
          { 
             inputFile.nextLine();
          }
+         
+         if(status.equalsIgnoreCase("smoker"))
+         {
+            smoker++;
+         }
+          else if(status.equalsIgnoreCase("non-smoker")){
+            nonSmoker++;
+          }
+          
          Policy policyEntry = new Policy(num, provider, first, last, holderAge, status, holderHeight, holderWeight);
          policyList.add(policyEntry); // add Policy objects to ArrayList
       }
@@ -58,8 +67,11 @@ public class Project1_Diana_Caloca
             System.out.println("Policyholder's Height: " + policyList.get(i).getPolicyholderHeight() + " inches");
             System.out.printf("Policyholder's Weight: %.2f pounds ", policyList.get(i).getPolicyholderWeight());
             System.out.printf("\nPolicyholder's BMI: %.2f ", policyList.get(i).getHolderBMI());
-            System.out.printf("\nPolicy Price: $%,.2f ", policyList.get(i).getInsurancePrice());
+            System.out.printf("\nPolicy Price: $%,.2f\n ", policyList.get(i).getInsurancePrice());
          }
          
+          
+          System.out.println("The number of policies with a smoker is: " + smoker);
+          System.out.println(" The number of policies with a non-smoker is: " + nonSmoker);
    }
 }
